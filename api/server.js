@@ -6,6 +6,8 @@ const app = fastify({
   logger: true,
 });
 
+const URL = 'https://neat-footprint-573871.framer.app/';
+
 const fetchData = async (url) => {
   try {
     const response = await axios.get(url);
@@ -17,7 +19,7 @@ const fetchData = async (url) => {
 
 app.get('/', async (request, reply) => {
   try {
-    const $ = await fetchData('https://neat-footprint-573871.framer.app/');
+    const $ = await fetchData(URL);
     reply.type('text/html').send($.html());
   } catch (error) {
     reply.code(500).send(error.message);

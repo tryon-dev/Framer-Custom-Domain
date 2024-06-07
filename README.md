@@ -34,7 +34,16 @@ Ce projet a pour objectif de permettre aux utilisateurs de Framer d'utiliser un 
     npm install -g vercel
     ```
 
-### 2. Déploiement sur Vercel
+### 2. Modification du fichier de configuration
+
+1. Ouvrez le fichier `api/server.js` dans votre éditeur de texte.
+2. Recherchez la ligne contenant `URL` et remplacez-la par l'URL de votre projet Framer.
+
+    ```javascript
+    const framerURL = 'https://yourproject.framer.app';
+    ```
+
+### 3. Déploiement sur Vercel
 
 1. Connectez-vous à Vercel.
 
@@ -50,7 +59,7 @@ Ce projet a pour objectif de permettre aux utilisateurs de Framer d'utiliser un 
 
     Suivez les instructions à l'écran pour configurer et déployer votre projet.
 
-### 3. Configuration du domaine sur Vercel
+### 4. Configuration du domaine sur Vercel
 
 1. Une fois le projet déployé, accédez à votre tableau de bord Vercel.
 2. Sélectionnez votre projet et accédez aux paramètres du domaine.
@@ -61,3 +70,7 @@ Ce projet a pour objectif de permettre aux utilisateurs de Framer d'utiliser un 
 
 - **Problème de propagation DNS :** Assurez-vous que les enregistrements DNS sont correctement configurés. Vérifiez les fautes de frappe et les erreurs dans les valeurs CNAME et les enregistrements A.
 - **Projet Framer non visible :** Vérifiez que le domaine personnalisé est correctement configuré dans les paramètres de votre projet Vercel et que le projet a été déployé après avoir ajouté le domaine.
+
+
+
+
